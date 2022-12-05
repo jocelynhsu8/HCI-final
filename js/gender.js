@@ -191,13 +191,12 @@ series.bullets.push(function () {
 
 var label = chart.plotContainer.children.push(am5.Label.new(root, {
     text: "2002",
-    fontSize: "4em",
+    fontSize: "8em",
     opacity: 0.2,
     x: am5.p100,
     y: am5.p100,
     centerY: am5.p100,
-    centerX: am5.p100,
-    title: "Female"
+    centerX: am5.p100
 }));
 
 // Get series item by category
