@@ -43,13 +43,13 @@ var data = [{
     "ne and employed": 48,
     "ne and not employed": 18,
 }, {
-    "ySocioeconomic Status": "Middle Fifth",
+    "Socioeconomic Status": "Middle Fifth",
     "e unemployed": 13,
     "E and employed": 28,
     "ne and employed": 42,
     "ne and not employed": 17,
 }, {
-    "ySocioeconomic Status": "Second-highest Fifth",
+    "Socioeconomic Status": "Second-highest Fifth",
     "e unemployed": 20,
     "E and employed": 38,
     "ne and employed": 33,
