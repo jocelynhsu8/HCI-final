@@ -22,6 +22,7 @@
     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
 
 
 </head>
@@ -84,6 +85,13 @@
                 <div class="post-preview">
                     <h2 class="post-title">Ethnicity</h2>
                     <p>Loreum ipsem</p>
+                    <button class="button-7" role="button" onclick="update(white)">White</button>
+                    <button class="button-7" role="button" onclick="update(asian)">Asian</button>
+                    <button class="button-7" role="button" onclick="update(latino)">Latino</button>
+                    <button class="button-7" role="button" onclick="update(black)">Black</button>
+
+                    <!-- Create a div where the graph will take place -->
+                    <div id="my_dataviz"></div>
                 </div>
                 <!-- Divider-->
                 <hr class="my-4" />
@@ -131,6 +139,7 @@
     <script src="js/education-bachelor.js"></script>
     <script src="js/education-masters.js"></script>
     <script src="js/education-doctoral.js"></script>
+    <script src="js/ethnicity.js"></script>
 </body>
 
 </html>
