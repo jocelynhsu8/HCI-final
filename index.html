@@ -18,6 +18,12 @@
         rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+
 </head>
 
 <body>
@@ -65,8 +71,46 @@
                         reported experiencing inequality, discrimination, and/or sexual harrassment.
                     </p>
                     <div id="chartdiv"></div>
+                    <p>
+                        Given these trends, it’s clear that gender disparity occurs at all parts of the journey to
+                        become a contributor in tech and is worsening over the years. In addition to hiring,
+                        inequalities should be addressed to support gender diversity.
+                    </p>
                 </div>
-
+                <!-- Divider-->
+                <hr class="my-4" />
+                <!-- Post preview-->
+                <div class="post-preview">
+                    <h2 class="post-title">Ethnicity</h2>
+                    <p>Loreum ipsem</p>
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+                <!-- Post preview-->
+                <div class="post-preview">
+                    <h2 class="post-title">Socioeconomic background</h2>
+                    <p>Loreum ipsem</p>
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+                <!-- Post preview-->
+                <div class="post-preview">
+                    <h2 class="post-title">Education</h2>
+                    <p>Loreum ipsem</p>
+                    <h4 class="post-title">Bachelor's</h4>
+                    <div id="chart-edu-bs-div"></div>
+                    <h4 class="post-title">Master's</h4>
+                    <div id="chart-edu-ms-div"></div>
+                    <h4 class="post-title">Doctoral</h4>
+                    <div id="chart-edu-phd-div"></div>
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+                <!-- Post preview-->
+                <div class="post-preview">
+                    <h2 class="post-title">Takeaways</h2>
+                    <p>Loreum ipsem</p>
+                </div>
             </div>
         </div>
     </div>
@@ -76,9 +120,9 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <script src="js/gender.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="js/education-bachelor.js"></script>
+    <script src="js/education-masters.js"></script>
+    <script src="js/education-doctoral.js"></script>
 </body>
 
 </html>

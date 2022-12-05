@@ -12209,7 +12209,11 @@ header.masthead .post-heading .meta a {
     }
 }
 
-#chartdiv {
+#chartdiv,
+#chart-edu-bs-div,
+#chart-edu-ms-div,
+#chart-edu-phd-div {
     width: 100%;
     height: 500px;
+    font-size: 20px;
 }

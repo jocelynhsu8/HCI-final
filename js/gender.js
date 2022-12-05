@@ -160,7 +160,7 @@ var series = chart.series.push(am5xy.ColumnSeries.new(root, {
     xAxis: xAxis,
     yAxis: yAxis,
     valueXField: "value",
-    categoryYField: "network"
+    categoryYField: "network",
 }));
 
 // Rounded corners for columns
@@ -191,12 +191,13 @@ series.bullets.push(function () {
 
 var label = chart.plotContainer.children.push(am5.Label.new(root, {
     text: "2002",
-    fontSize: "8em",
+    fontSize: "4em",
     opacity: 0.2,
     x: am5.p100,
     y: am5.p100,
     centerY: am5.p100,
-    centerX: am5.p100
+    centerX: am5.p100,
+    title: "Female"
 }));
 
 // Get series item by category
