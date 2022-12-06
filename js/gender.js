@@ -93,7 +93,7 @@ var allData = {
 var root = am5.Root.new("chartdiv");
 
 root.numberFormatter.setAll({
-    numberFormat: "#a",
+    numberFormat: "#a%",
 
     // Group only into M (millions), and B (billions)
     bigNumberPrefixes: [
@@ -105,7 +105,7 @@ root.numberFormatter.setAll({
     smallNumberPrefixes: []
 });
 
-var stepDuration = 4000;
+var stepDuration = 2000;
 
 
 // Set themes
