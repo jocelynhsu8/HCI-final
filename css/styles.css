@@ -12212,11 +12212,16 @@ header.masthead .post-heading .meta a {
 #chartdiv,
 #chart-edu-bs-div,
 #chart-edu-ms-div,
-#chart-edu-phd-div,
-#chart-socioecon-div {
+#chart-edu-phd-div {
     width: 100%;
     height: 500px;
     font-size: 20px;
+}
+
+#chart-socioecon-div {
+    width: 100%;
+    height: 500px;
+    font-size: 15px;
 }
 
 /* CSS */
