@@ -1,177 +1,87 @@
-/*
-// create 2 data_set
-var white = [
-   {group: "U.S. Population", value: 61},
-   {group: "Facebook", value: 49},
-   {group: "LinkedIn", value: 52},
-   {group: "Apple", value: 54},
-];
-
-var asian = [
-    {group: "U.S. Population", value: 6},
-    {group: "Facebook", value: 40},
-    {group: "LinkedIn", value: 39},
-    {group: "Apple", value: 21}
- ];
-
- var latino = [
-    {group: "U.S. Population", value: 18}, 
-    {group: "Facebook", value: 5},
-    {group: "LinkedIn", value: 4},
-    {group: "Apple", value: 13}
- ];
-
-var black = [
-    {group: "U.S. Population", value: 13},
-    {group: "Facebook", value: 3},
-    {group: "LinkedIn", value: 4},
-    {group: "Apple", value: 9}
-];
-
-
-
-// set the dimensions and margins of the graph
-var margin = {top: 20, right: 30, bottom: 40, left: 90},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
-
-
-// append the svg object to the body of the page
-var svg = d3.select("#my_dataviz")
-  .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
-
-// X axis
-var x = d3.scaleLinear()
-    .domain([0, 100])
-    .range([ 0, width]);
-  svg.append("g")
-    .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x))
-    .selectAll("text")
-      .attr("transform", "translate(-10,0)rotate(-45)")
-      .style("text-anchor", "end");
-
-// Add Y axis
-var y = d3.scaleBand()
-.range([ 0, height ])
-.domain(white.map(function(d) { return d.group; }))
-.padding(.1);
-svg.append("g")
-.call(d3.axisLeft(y))
-
-// A function that create / update the plot for a given variable:
-function update(data) {
-
-  var u = svg.selectAll("rect")
-    .data(data)
-
-  u
-    .enter()
-    .append("rect")
-    .merge(u)
-    .transition()
-    .duration(1000)
-      .attr("x", x(0))
-      .attr("y", function(d) { return x(d.group); })
-      .attr("width",  function(d) { return y(d.value); })
-      .attr("height", y.bandwidth())
-      .attr("fill", "#69b3a2")
-}
-
-// Initialize the plot with the first dataset
-update(white);
-*/
-
-
 // create 2 data_set
 
 // Facebook, Apple (?), Airbnb, Netflix, Google, Microsoft, Pinterest, Twitter, eBay, nVidia, 
 
 var white = [
-   {group: "U.S.", value: 61},
-   {group: "Facebook", value: 49},
-   {group: "AirBnB", value: 50},
-   {group: "Netflix", value: 49},
-   {group: "Google", value: 53},
-   {group: "Microsoft", value: 56},
-   {group: "Pinterest", value: 48},
-   {group: "Twitter", value: 44},
-   {group: "eBay", value: 50},
-   {group: "Nvidia", value: 37},
+    { group: "U.S.", value: 61 },
+    { group: "Facebook", value: 49 },
+    { group: "AirBnB", value: 50 },
+    { group: "Netflix", value: 49 },
+    { group: "Google", value: 53 },
+    { group: "Microsoft", value: 56 },
+    { group: "Pinterest", value: 48 },
+    { group: "Twitter", value: 44 },
+    { group: "eBay", value: 50 },
+    { group: "Nvidia", value: 37 },
 ];
 
 var asian = [
-    {group: "U.S.", value: 6},
-    {group: "Facebook", value: 40},
-    {group: "AirBnB", value: 36},
-    {group: "Netflix", value: 24},
-    {group: "Google", value: 36},
-    {group: "Microsoft", value: 31},
-    {group: "Pinterest", value: 41},
-    {group: "Twitter", value: 26},
-    {group: "eBay", value: 39},
-    {group: "Nvidia", value: 45},
- ];
+    { group: "U.S.", value: 6 },
+    { group: "Facebook", value: 40 },
+    { group: "AirBnB", value: 36 },
+    { group: "Netflix", value: 24 },
+    { group: "Google", value: 36 },
+    { group: "Microsoft", value: 31 },
+    { group: "Pinterest", value: 41 },
+    { group: "Twitter", value: 26 },
+    { group: "eBay", value: 39 },
+    { group: "Nvidia", value: 45 },
+];
 
- var latino = [
-    {group: "U.S.", value: 18},
-    {group: "Facebook", value: 5},
-    {group: "AirBnB", value: 7},
-    {group: "Netflix", value: 6},
-    {group: "Google", value: 4},
-    {group: "Microsoft", value: 6},
-    {group: "Pinterest", value: 6},
-    {group: "Twitter", value: 3},
-    {group: "eBay", value: 6},
-    {group: "Nvidia", value: 3},
- ];
+var latino = [
+    { group: "U.S.", value: 18 },
+    { group: "Facebook", value: 5 },
+    { group: "AirBnB", value: 7 },
+    { group: "Netflix", value: 6 },
+    { group: "Google", value: 4 },
+    { group: "Microsoft", value: 6 },
+    { group: "Pinterest", value: 6 },
+    { group: "Twitter", value: 3 },
+    { group: "eBay", value: 6 },
+    { group: "Nvidia", value: 3 },
+];
 
 var black = [
-    {group: "U.S.", value: 13},
-    {group: "Facebook", value: 3},
-    {group: "AirBnB", value: 3},
-    {group: "Netflix", value: 4},
-    {group: "Google", value: 3},
-    {group: "Microsoft", value: 4},
-    {group: "Pinterest", value: 3},
-    {group: "Twitter", value: 3},
-    {group: "eBay", value: 3},
-    {group: "Nvidia", value: 1},
+    { group: "U.S.", value: 13 },
+    { group: "Facebook", value: 3 },
+    { group: "AirBnB", value: 3 },
+    { group: "Netflix", value: 4 },
+    { group: "Google", value: 3 },
+    { group: "Microsoft", value: 4 },
+    { group: "Pinterest", value: 3 },
+    { group: "Twitter", value: 3 },
+    { group: "eBay", value: 3 },
+    { group: "Nvidia", value: 1 },
 ];
 
 
 // set the dimensions and margins of the graph
-var margin = {top: 30, right: 30, bottom: 70, left: 60},
+var margin = { top: 30, right: 30, bottom: 70, left: 60 },
     width = 560 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
-  .append("svg")
+    .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
-  .append("g")
+    .append("g")
     .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+        "translate(" + margin.left + "," + margin.top + ")");
 
 // add the chart title
 svg.append("text")
-    .attr("x", (width / 2))             
+    .attr("x", (width / 2))
     .attr("y", 10 - (margin.top / 2))
-    .attr("text-anchor", "middle")  
-    .style("font-size", "18px") 
-    .style("text-decoration", "underline")  
+    .attr("text-anchor", "middle")
+    .style("font-size", "18px")
+    .style("text-decoration", "underline")
     .text("Ethnic Breakdown in Top Tech Companies");
 
 //Create X axis label   
 svg.append("text")
-    .attr("x", width / 2 )
-    .attr("y",  height + margin.bottom - 30)
+    .attr("x", width / 2)
+    .attr("y", height + margin.bottom - 30)
     .style("text-anchor", "middle")
     .text("Company");
 
@@ -182,43 +92,43 @@ svg.append("text")
     .attr("x", 0 - (height / 2))
     .attr("dy", "1em")
     .style("text-anchor", "middle")
-    .text("Percentage (%)");  
+    .text("Percentage (%)");
 
 // X axis
 var x = d3.scaleBand()
-  .range([ 0, width ])
-  .domain(white.map(function(d) { return d.group; }))
-  .padding(0.2);
+    .range([0, width])
+    .domain(white.map(function (d) { return d.group; }))
+    .padding(0.2);
 svg.append("g")
-  .attr("transform", "translate(0," + height + ")")
-  .call(d3.axisBottom(x))
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
 
 // Add Y axis
 var y = d3.scaleLinear()
-  .domain([0, 65])
-  .range([ height, 0]);
+    .domain([0, 65])
+    .range([height, 0]);
 svg.append("g")
-  .attr("class", "myYaxis")
-  .call(d3.axisLeft(y));
+    .attr("class", "myYaxis")
+    .call(d3.axisLeft(y));
 
 // A function that create / update the plot for a given variable:
 function update(data) {
 
-  var u = svg.selectAll("rect")
-    .data(data)
+    var u = svg.selectAll("rect")
+        .data(data)
 
-  u
-    .enter()
-    .append("rect")
-    .merge(u)
-    .transition()
-    .duration(1000)
-      .text(d => d.value)
-      .attr("x", function(d) { return x(d.group); })
-      .attr("y", function(d) { return y(d.value); })
-      .attr("width", x.bandwidth())
-      .attr("height", function(d) { return height - y(d.value); })
-      .attr("fill", "#f06800")
+    u
+        .enter()
+        .append("rect")
+        .merge(u)
+        .transition()
+        .duration(1000)
+        .text(d => d.value)
+        .attr("x", function (d) { return x(d.group); })
+        .attr("y", function (d) { return y(d.value); })
+        .attr("width", x.bandwidth())
+        .attr("height", function (d) { return height - y(d.value); })
+        .attr("fill", "#6353AA")
 }
 
 // Initialize the plot with the first dataset
