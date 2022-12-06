@@ -188,6 +188,12 @@ p {
     margin-bottom: 1rem;
 }
 
+li,
+.li {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
 abbr[title],
 abbr[data-bs-original-title] {
     -webkit-text-decoration: underline dotted;
